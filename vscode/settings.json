@@ -1,0 +1,23 @@
+{
+    "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\wsl.exe",
+    "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+    "security.workspace.trust.untrustedFiles": "open",
+    "intelephense.files.associations": [
+        "*.php",
+        "*.phtml"
+    ],
+    "intelephense.stubs": [
+        "Core",
+        "mysql",
+        "mysqli",
+        "standard",
+        "wordpress"
+    ],
+    "intelephense.diagnostics.undefinedClassConstants": false,
+    "intelephense.diagnostics.undefinedConstants": false,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedMethods": false,
+    "intelephense.diagnostics.undefinedTypes": false,
+    "intelephense.diagnostics.undefinedVariables": false,
+    "window.zoomLevel": 1
+}
