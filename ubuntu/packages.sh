@@ -51,11 +51,19 @@ case $OPTION in
     ;;
   MYSQL)
     sudo apt install -y mysql-server mysql-client
-    sudo service mysql status
+    sudo service mysql start
+    echo -e "\033[1;34m This is the command you must run in the MySQL console: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'toor'; exit; \033[0m"
+    sudo mysql
+    echo -e "\033[1;34m And now, enter the same password you have chosen for the root user and answer all 'yes' \033[0m"
+    sudo mysql_secure_installation
     ;;
   MDB)
     sudo apt install -y mariadb-server mariadb-client
-    sudo service mysql status
+    sudo service mysql start
+    echo -e "\033[1;34m This is the command you must run in the MariaDB console: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'toor'; exit; \033[0m"
+    sudo mysql
+    echo -e "\033[1;34m And now, enter the same password you have chosen for the root user and answer all 'yes' \033[0m"
+    sudo mysql_secure_installation
     ;;
   NVM)
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
