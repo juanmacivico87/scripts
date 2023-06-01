@@ -24,6 +24,15 @@
             "request": "launch",
             "url": "http://yourlocaldomain.com",
             "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Listen Python",
+            "type": "python",
+            "request": "launch",
+            "python": "/usr/bin/python3",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
