@@ -7,5 +7,7 @@ code --install-extension ms-vscode.cpptools
 code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension eamodio.gitlens
 code --install-extension gruntfuggly.todo-tree
+code --install-extension ms-python.python
+code --install-extension kevinrose.vsc-python-indent
 
 code --install-extension github.copilot
