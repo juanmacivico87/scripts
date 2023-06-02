@@ -9,6 +9,7 @@ echo '[MYSQL] Intall MySQL'
 echo '[MDB] Intall MariaDB'
 echo '[PHP] Install PHP'
 echo '[PIP3] Install PIP3'
+echo '[POETRY] Install Poetry'
 echo '[NVM] Install NVM'
 echo '[COMP] Install Composer'
 echo '[WPCLI] Install WP-CLI'
@@ -119,6 +120,10 @@ case $OPTION in
     sudo service apache2 restart
 
     php -v
+    ;;
+  POETRY)
+    curl -sSL https://install.python-poetry.org | python3 -
+    poetry --version
     ;;
   *)
     echo ''
