@@ -9,10 +9,11 @@ echo '[MYSQL] Intall MySQL'
 echo '[MDB] Intall MariaDB'
 echo '[PHP] Install PHP'
 echo '[PIP3] Install PIP3'
+echo '[COMP] Install Composer'
 echo '[POETRY] Install Poetry'
 echo '[NVM] Install NVM'
-echo '[COMP] Install Composer'
 echo '[WPCLI] Install WP-CLI'
+echo '[DJANGO] Install Django'
 echo '[CPP] Install C++ compiler'
 echo '[PHPV] Switch PHP version'
 read OPTION
@@ -124,6 +125,9 @@ case $OPTION in
   POETRY)
     curl -sSL https://install.python-poetry.org | python3 -
     poetry --version
+    ;;
+  DJANGO)
+    python3 -m pip install Django
     ;;
   *)
     echo ''
