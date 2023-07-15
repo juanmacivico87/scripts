@@ -16,6 +16,7 @@ echo '[NVM] Install NVM'
 echo '[WPCLI] Install WP-CLI'
 echo '[DJANGO] Install Django'
 echo '[PYENV] Install DotEnv for Python'
+echo '[PYMYSQL] Install MySQL client for Python'
 echo '[CPP] Install C++ compiler'
 echo '[PHPV] Switch PHP version'
 read OPTION
@@ -147,6 +148,9 @@ case $OPTION in
   POETRY)
     curl -sSL https://install.python-poetry.org | python3 -
     poetry --version
+    ;;
+  PYMYSQL)
+    python3 -m pip install mysqlclient
     ;;
   PYENV)
     python3 -m pip install python-dotenv
