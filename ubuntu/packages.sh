@@ -8,6 +8,7 @@ echo '[AP2] Install Apache'
 echo '[MYSQL] Intall MySQL'
 echo '[MDB] Intall MariaDB'
 echo '[PHP] Install PHP'
+echo '[PYTHON] Install Python'
 echo '[PIP3] Install PIP3'
 echo '[COMP] Install Composer'
 echo '[POETRY] Install Poetry'
@@ -36,6 +37,26 @@ case $OPTION in
   AP2)
     sudo apt install -y apache2 apache2-utils
     sudo service apache2 status
+    ;;
+  PHP)
+    sudo add-apt-repository ppa:ondrej/apache2
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:ondrej/php
+    sudo apt update
+    echo 'What PHP version do you want to install??'
+    read PHP_VERSION
+
+    if [ PHP_VERSION = '' ]
+    then
+      PHP_VERSION = '8.1'
+    fi
+
+    sudo apt install php"$PHP_VERSION"-common php"$PHP_VERSION"-cli -y
+    sudo apt install php"$PHP_VERSION" libapache2-mod-php"$PHP_VERSION" php"$PHP_VERSION"-fpm php-common php"$PHP_VERSION"-mysql php"$PHP_VERSION"-xml php"$PHP_VERSION"-xmlrpc php"$PHP_VERSION"-curl php"$PHP_VERSION"-gd php"$PHP_VERSION"-imagick php"$PHP_VERSION"-cli php"$PHP_VERSION"-dev php"$PHP_VERSION"-imap php"$PHP_VERSION"-mbstring php"$PHP_VERSION"-opcache php"$PHP_VERSION"-readline php"$PHP_VERSION"-soap php"$PHP_VERSION"-zip php"$PHP_VERSION"-intl php"$PHP_VERSION"-xdebug php"$PHP_VERSION"-redis -y
+    ;;
+  PYTHON)
+    sudo apt install python3 python3-dev default-libmysqlclient-dev build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+    python3 --version
     ;;
   PHP)
     sudo add-apt-repository ppa:ondrej/apache2
