@@ -149,7 +149,7 @@ case $OPTION in
     poetry --version
     ;;
   PYENV)
-    pip install python-dotenv
+    python3 -m pip install python-dotenv
     ;;
   DJANGO)
     python3 -m pip install django
