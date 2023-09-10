@@ -15,6 +15,7 @@ echo '[POETRY] Install Poetry'
 echo '[NVM] Install NVM'
 echo '[WPCLI] Install WP-CLI'
 echo '[DJANGO] Install Django'
+echo '[DRF] Install Django Rest Framework'
 echo '[PYENV] Install DotEnv for Python'
 echo '[PYMYSQL] Install MySQL client for Python'
 echo '[CPP] Install C++ compiler'
@@ -158,6 +159,9 @@ case $OPTION in
   DJANGO)
     python3 -m pip install django
     python3 -m django --version
+    ;;
+  DRF)
+    python3 -m pip install djangorestframework
     ;;
   *)
     echo ''
