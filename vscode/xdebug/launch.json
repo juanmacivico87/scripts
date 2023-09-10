@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Listen for XDebug",
+            "name": "PHP: Browser",
             "type": "php",
             "request": "launch",
             "port": 9900
         },
         {
-            "name": "Launch currently open script",
+            "name": "PHP: Terminal",
             "type": "php",
             "request": "launch",
             "program": "${file}",
@@ -19,20 +19,23 @@
             "port": 9900
         },
         {
-            "name": "Listen for JS",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://yourlocaldomain.com",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "name": "Listen Python",
+            "name": "Python: Integrated Terminal",
             "type": "python",
             "request": "launch",
             "python": "/usr/bin/python3",
             "program": "${file}",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Django: Integrated Terminal",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "runserver"
+            ],
+            "django": true
         }
     ]
 }
