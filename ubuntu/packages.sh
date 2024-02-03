@@ -9,6 +9,7 @@ echo '[MYSQL] Intall MySQL'
 echo '[MDB] Intall MariaDB'
 echo '[PHP] Install PHP'
 echo '[PYTHON] Install Python'
+echo '[JAVA] Install Java'
 echo '[PIP3] Install PIP3'
 echo '[COMP] Install Composer'
 echo '[POETRY] Install Poetry'
@@ -60,21 +61,16 @@ case $OPTION in
     sudo apt install python3 python3-dev default-libmysqlclient-dev build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
     python3 --version
     ;;
-  PHP)
-    sudo add-apt-repository ppa:ondrej/apache2
-    sudo apt install software-properties-common
-    sudo add-apt-repository ppa:ondrej/php
-    sudo apt update
-    echo 'What PHP version do you want to install??'
-    read PHP_VERSION
+  JAVA)
+    echo 'What Java version do you want to install??'
+    read JAVA_VERSION
 
-    if [ PHP_VERSION = '' ]
+    if [ JAVA_VERSION = '' ]
     then
-      PHP_VERSION = '8.1'
+      JAVA_VERSION = '21'
     fi
 
-    sudo apt install php"$PHP_VERSION"-common php"$PHP_VERSION"-cli -y
-    sudo apt install php"$PHP_VERSION" libapache2-mod-php"$PHP_VERSION" php"$PHP_VERSION"-fpm php-common php"$PHP_VERSION"-mysql php"$PHP_VERSION"-xml php"$PHP_VERSION"-xmlrpc php"$PHP_VERSION"-curl php"$PHP_VERSION"-gd php"$PHP_VERSION"-imagick php"$PHP_VERSION"-cli php"$PHP_VERSION"-dev php"$PHP_VERSION"-imap php"$PHP_VERSION"-mbstring php"$PHP_VERSION"-opcache php"$PHP_VERSION"-readline php"$PHP_VERSION"-soap php"$PHP_VERSION"-zip php"$PHP_VERSION"-intl php"$PHP_VERSION"-xdebug php"$PHP_VERSION"-redis -y
+    sudo apt install openjdk-"$JAVA_VERSION"-jdk -y
     ;;
   PIP3)
     sudo apt install python3-pip
