@@ -4,6 +4,7 @@ echo ''
 echo '[DEV] Extensions that I can use to develop, regardless of the language I use'
 echo '[PHP] For my PHP developments'
 echo '[PYTHON] For my Python developments'
+echo '[JAVA] For my Java developments'
 echo '[WP] For my WordPress developments'
 echo '[CPP] For my C++ developments'
 read OPTION
@@ -25,6 +26,13 @@ case $OPTION in
   PYTHON)
     code --install-extension ms-python.python
     code --install-extension kevinrose.vsc-python-indent
+    ;;
+  JAVA)
+    code --install-extension redhat.java
+    code --install-extension vscjava.vscode-java-debug
+    code --install-extension vscjava.vscode-java-test
+    code --install-extension vscjava.vscode-maven
+    code --install-extension vscjava.vscode-java-dependency
     ;;
   WP)
     code --install-extension wordpresstoolbox.wordpress-toolbox
