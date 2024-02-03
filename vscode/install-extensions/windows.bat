@@ -2,6 +2,7 @@ code --install-extension gerardreches.php-extension-pack
 code --install-extension bmewburn.vscode-intelephense-client
 code --install-extension emallin.phpunit
 code --install-extension wordpresstoolbox.wordpress-toolbox
+code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode.cpptools
 code --install-extension ms-vsliveshare.vsliveshare
