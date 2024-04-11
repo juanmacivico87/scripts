@@ -4,6 +4,7 @@ echo [DEV] Extensions that I can use to develop, regardless of the language I us
 echo [PHP] For my PHP developments
 echo [PYTHON] For my Python developments
 echo [JAVA] For my Java developments
+echo '[SPRING] For my SpringBoot developments'
 echo [WP] For my WordPress developments
 echo [CPP] For my C++ developments
 
@@ -28,10 +29,15 @@ IF "%option%"=="DEV" (
   code --install-extension vscjava.vscode-java-test
   code --install-extension vscjava.vscode-maven
   code --install-extension vscjava.vscode-java-dependency
+  code --install-extension VisualStudioExptTeam.vscodeintellicode
 ) ELSE IF "%option%"=="WP" (
   code --install-extension wordpresstoolbox.wordpress-toolbox
 ) ELSE IF "%option%"=="CPP" (
   code --install-extension ms-vscode.cpptools
+) ELSE IF "%option%"=="SPRING" (
+  code --install-extension vscjava.vscode-spring-boot-dashboard
+  code --install-extension vscjava.vscode-spring-initializr
+  code --install-extension vmware.vscode-spring-boot
 ) ELSE (
   echo Sorry, that is not a valid option
 )

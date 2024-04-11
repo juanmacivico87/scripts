@@ -5,6 +5,7 @@ echo '[DEV] Extensions that I can use to develop, regardless of the language I u
 echo '[PHP] For my PHP developments'
 echo '[PYTHON] For my Python developments'
 echo '[JAVA] For my Java developments'
+echo '[SPRING] For my SpringBoot developments'
 echo '[WP] For my WordPress developments'
 echo '[CPP] For my C++ developments'
 read OPTION
@@ -33,12 +34,18 @@ case $OPTION in
     code --install-extension vscjava.vscode-java-test
     code --install-extension vscjava.vscode-maven
     code --install-extension vscjava.vscode-java-dependency
+    code --install-extension VisualStudioExptTeam.vscodeintellicode
     ;;
   WP)
     code --install-extension wordpresstoolbox.wordpress-toolbox
     ;;
   CPP)
     code --install-extension ms-vscode.cpptools
+    ;;
+  SPRING)
+    code --install-extension vscjava.vscode-spring-boot-dashboard
+    code --install-extension vscjava.vscode-spring-initializr
+    code --install-extension vmware.vscode-spring-boot
     ;;
   *)
     echo ''
