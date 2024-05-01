@@ -19,5 +19,7 @@
     "intelephense.diagnostics.undefinedMethods": false,
     "intelephense.diagnostics.undefinedTypes": false,
     "intelephense.diagnostics.undefinedVariables": false,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
