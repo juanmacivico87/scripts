@@ -17,6 +17,7 @@ echo '[NVM] Install NVM'
 echo '[WPCLI] Install WP-CLI'
 echo '[DJANGO] Install Django'
 echo '[DRF] Install Django Rest Framework'
+echo '[NEST] Install Nest.js Framework'
 echo '[PYENV] Install DotEnv for Python'
 echo '[PYMYSQL] Install MySQL client for Python'
 echo '[CPP] Install C++ compiler'
@@ -158,6 +159,9 @@ case $OPTION in
     ;;
   DRF)
     python3 -m pip install djangorestframework
+    ;;
+  NEST)
+    npm i -g @nestjs/cli
     ;;
   *)
     echo ''
